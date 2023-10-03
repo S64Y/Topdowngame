@@ -1,15 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement; //importing SceneManagement Library
 
 public class Player : MonoBehaviour
 {
-    public float speed = 0.4f; 
+    public float speed = 0.4f;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -20,7 +21,7 @@ public class Player : MonoBehaviour
         if (Input.GetKey("w"))
         {
             //player moves up
-            newPosition.y += speed; 
+            newPosition.y += speed;
         }
 
         if (Input.GetKey("s"))
@@ -46,4 +47,22 @@ public class Player : MonoBehaviour
         transform.position = newPosition;
     }
 
-}
+    private void OnCollisionEnter2D(Collision2D collision){
+    if(collision.gameObject.tag.Equals("Door"))
+        {
+            Debug.Log("hit");
+            SceneManager.LoadScene(1); //access SceneManager class for LoadScene function
+        }
+    }
+    
+         
+    
+        
+ }
+
+
+
+
+
+
+  
