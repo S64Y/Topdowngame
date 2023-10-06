@@ -5,7 +5,10 @@ using UnityEngine.SceneManagement; //importing SceneManagement Library
 
 public class Player : MonoBehaviour
 {
-    public float speed = 0.4f;
+    public float speed = 0.2f;
+    public bool hasKey = false;
+
+    public GameObject key;
 
     // Start is called before the first frame update
     void Start()
@@ -47,18 +50,29 @@ public class Player : MonoBehaviour
         transform.position = newPosition;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision){
-    if(collision.gameObject.tag.Equals("Door"))
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag.Equals("Door"))
         {
             Debug.Log("hit");
             SceneManager.LoadScene(1); //access SceneManager class for LoadScene function
         }
+
+        if (collision.gameObject.tag.Equals("Key"))
+        {
+            Debug.Log("obtained key");
+            key.SetActive(false); //key disappears
+            hasKey = true; //player has the key now
+
+        }
     }
+  
+ }
     
          
     
         
- }
+ 
 
 
 
