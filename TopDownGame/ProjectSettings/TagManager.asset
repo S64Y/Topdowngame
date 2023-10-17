@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Door
   - Key
+  - DoorTwo
+  - end
   layers:
   - Default
   - TransparentFX
