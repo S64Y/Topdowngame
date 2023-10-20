@@ -85,6 +85,12 @@ public class Player : MonoBehaviour
         {
             Debug.Log("hit");
         }
+
+        if (collision.gameObject.tag.Equals("end"))
+        {
+            Debug.Log("hit");
+            SceneManager.LoadScene(2); //access SceneManager class for LoadScene function
+        }
     }
   
  }
