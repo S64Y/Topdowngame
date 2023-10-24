@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag.Equals("Door"))
         {
             Debug.Log("hit");
-            SceneManager.LoadScene(1); //access SceneManager class for LoadScene function
+            SceneManager.LoadScene(2); //access SceneManager class for LoadScene function
         }
 
         if (collision.gameObject.tag.Equals("Key"))
@@ -77,7 +77,7 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag.Equals("DoorTwo"))
         {
             Debug.Log("hit");
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
 
         if (collision.gameObject.tag.Equals("end") && hasKey == true) //needs to satisfy both
@@ -89,7 +89,7 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag.Equals("end") && hasKey == true)
         {
             Debug.Log("hit");
-            SceneManager.LoadScene(2); //access SceneManager class for LoadScene function
+            SceneManager.LoadScene(3); //access SceneManager class for LoadScene function
         }
 
         if (collision.gameObject.tag.Equals("ExitOutside"))
@@ -108,7 +108,7 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag.Equals("DoorToRoom"))
         {
             Debug.Log("hit");
-            SceneManager.LoadScene(3); //access SceneManager class for LoadScene function
+            SceneManager.LoadScene(4); //access SceneManager class for LoadScene function
         }
 
 

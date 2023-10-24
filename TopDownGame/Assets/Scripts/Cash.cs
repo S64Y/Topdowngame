@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Cash : MonoBehaviour
 {
+    public AudioSource keysound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +16,15 @@ public class Cash : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag.Equals("Player"))
+        {
+            Debug.Log("obtained Cash");
+            Destroy(this.gameObject); //destroy Cash object 
+
+        }
     }
 }
