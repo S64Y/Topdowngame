@@ -8,6 +8,11 @@ TagManager:
   - Key
   - DoorTwo
   - end
+  - ExitOutside
+  - keypass
+  - DoorToRoom
+  - Ending
+  - CASH
   layers:
   - Default
   - TransparentFX

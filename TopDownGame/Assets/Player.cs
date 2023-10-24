@@ -86,10 +86,37 @@ public class Player : MonoBehaviour
             Debug.Log("hit");
         }
 
-        if (collision.gameObject.tag.Equals("end"))
+        if (collision.gameObject.tag.Equals("end") && hasKey == true)
         {
             Debug.Log("hit");
             SceneManager.LoadScene(2); //access SceneManager class for LoadScene function
+        }
+
+        if (collision.gameObject.tag.Equals("ExitOutside"))
+        {
+            Debug.Log("hit");
+            SceneManager.LoadScene(1); //access SceneManager class for LoadScene function
+        }
+
+        if (collision.gameObject.tag.Equals("keypass"))
+        {
+            Debug.Log("obtained keypass");
+            //key.SetActive(false); //key disappears
+            hasKey = true; //player has the key now
+        }
+
+        if (collision.gameObject.tag.Equals("DoorToRoom"))
+        {
+            Debug.Log("hit");
+            SceneManager.LoadScene(3); //access SceneManager class for LoadScene function
+        }
+
+
+        if (collision.gameObject.tag.Equals("Cash"))
+        {
+            Debug.Log("obtained CASH");
+            key.SetActive(false); //CASH disappears
+            hasKey = true; //player has the CASH now
         }
     }
   
