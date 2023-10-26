@@ -13,6 +13,7 @@ TagManager:
   - DoorToRoom
   - Ending
   - CASH
+  - Enemy
   layers:
   - Default
   - TransparentFX
