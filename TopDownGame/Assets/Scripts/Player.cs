@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement; //importing SceneManagement Library
 
 public class Player : MonoBehaviour
 {
-    public float speed = 0.2f;
+    public float speed = 0.02f;
     public bool hasKey = false;
 
     public GameObject key;

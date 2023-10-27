@@ -14,6 +14,7 @@ TagManager:
   - Ending
   - CASH
   - Enemy
+  - DoorKey
   layers:
   - Default
   - TransparentFX
