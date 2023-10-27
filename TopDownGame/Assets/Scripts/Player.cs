@@ -118,6 +118,12 @@ public class Player : MonoBehaviour
             key.SetActive(false); //CASH disappears
             hasKey = true; //player has the CASH now
         }
+
+        if (collision.gameObject.tag.Equals("Enemy"))
+        {
+            Debug.Log("hit");
+            SceneManager.LoadScene(5); //access SceneManager class for LoadScene function
+        }
     }
   
  }
