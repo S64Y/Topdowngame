@@ -15,6 +15,7 @@ TagManager:
   - CASH
   - Enemy
   - DoorKey
+  - GEM
   layers:
   - Default
   - TransparentFX
