@@ -16,6 +16,7 @@ TagManager:
   - Enemy
   - DoorKey
   - GEM
+  - CaveDoor
   layers:
   - Default
   - TransparentFX

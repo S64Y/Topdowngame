@@ -15,12 +15,12 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(instance !=null) //check if instance is in the scene 
+        if (instance != null) //check if instance is in the scene 
         {
             Destroy(gameObject);
             return;
         }
-        instance= this;
+        instance = this;
         GameObject.DontDestroyOnLoad(gameObject);
     }
 
@@ -81,7 +81,7 @@ public class Player : MonoBehaviour
         }
 
         if (collision.gameObject.tag.Equals("end") && hasKey == true) //needs to satisfy both
-                                                                       //conditions to enter the end door 
+                                                                      //conditions to enter the end door 
         {
             Debug.Log("hit");
         }
@@ -124,10 +124,16 @@ public class Player : MonoBehaviour
             Debug.Log("hit");
             SceneManager.LoadScene(5); //access SceneManager class for LoadScene function
         }
+
+
+        if (collision.gameObject.tag.Equals("CaveDoor"))
+        {
+            Debug.Log("hit");
+            SceneManager.LoadScene(6); //access SceneManager class for LoadScene function
+
+        }
     }
-  
- }
-    
+}
          
     
         

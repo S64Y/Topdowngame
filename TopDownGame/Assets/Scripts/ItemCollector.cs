@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ItemCollector : MonoBehaviour
 {
-    private int gems = 0;
+    private int letters = 0;
 
     [SerializeField] private Text gemsText;
 
@@ -14,8 +14,8 @@ public class ItemCollector : MonoBehaviour
         if (collision.gameObject.CompareTag("GEM"))
         {
             Destroy(collision.gameObject);
-            gems++;
-            gemsText.text = "Gems: " + gems;
+            letters++;
+            gemsText.text = "Letters: " + letters;
         }
 
     }
